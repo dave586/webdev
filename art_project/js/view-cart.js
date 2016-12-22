@@ -76,7 +76,7 @@ $(function() {
         var baseCostDataEle = document.getElementById("costData|" + pId);
         var baseCostEle = document.getElementById("cost|" + pId);
 
-        baseCostEle.textContent = "Base Cost: $" + commaSeparateNumber(baseCost.toFixed(2));
+        baseCostEle.textContent =  commaSeparateNumber(baseCost.toFixed(2));
         baseCostDataEle.textContent = baseCost;
 
         return baseCost;

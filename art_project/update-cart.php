@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: edbertvoo
- * Date: 2016-11-19
- * Time: 6:39 PM
- */
+
 
 include_once 'components/includes.php';
 include_once "components/Cart.php";

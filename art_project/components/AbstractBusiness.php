@@ -1,11 +1,6 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: edbertvoo
- * Date: 2016-11-01
- * Time: 10:46 AM
- */
+
 class AbstractBusiness
 {
 

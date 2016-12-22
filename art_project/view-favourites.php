@@ -17,6 +17,8 @@ include_once 'components/Favourites.php';
             echo generateHeader();
             $favourites = BusinessHelper::createObject(new Favourites(BusinessHelper::getConnection()));
         ?>
+            <main>
+                <h2 class="ui horizontal divider"></h2>
                 <div class="ui stackable grid container">
                     <div class="left floated three wide column">
                         <h3 class="ui dividing header">Actions</h3>
@@ -28,15 +30,14 @@ include_once 'components/Favourites.php';
                         <h2 class="ui dividing header">Favourites</h2>
                         <div class="two column grid">
                             
-                                <br>
+
                                 <h3 class="ui header">Paintings</h3>
                                 <div class="ui items">
                                     <?php echo $favourites->generateFavouritesPaintingsView(); ?>
                                 </div>
-                            
+                            <h2 class="ui horizontal divider"></h2>
                            
-                                <br>
-                                <br>
+
                                 <h3 class="ui header">Artists</h3>
                                 <div class="ui items">
                                     <?php echo $favourites->generateFavouritesArtistsView(); ?>
@@ -50,7 +51,10 @@ include_once 'components/Favourites.php';
 
                 <?php BusinessHelper::closeAllConnection(); ?>
 
-
+            </main>
+            <?php
+            echo generateFooter();
+            ?>
 
         </body>
 

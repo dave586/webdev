@@ -22,6 +22,7 @@ echo generateHead("Browse Galleries");
 <?php
 echo generateHeader();
     ?>
+<main>
         <h2 class="ui horizontal divider"></h2>  
 <?php
 $gallery = BusinessHelper::createObject(new BrowseGalleries(BusinessHelper::getConnection()));
@@ -36,7 +37,13 @@ echo $gallery->generateGalleryList();
 BusinessHelper::closeAllConnection();
 
 ?>
+
     </div>
+</main>
+
+<?php
+echo generateFooter();
+?>
 </body>
 
 </html>

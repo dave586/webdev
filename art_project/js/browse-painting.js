@@ -145,8 +145,9 @@ $(document).ready(function() {
 
 
             var content = $("<div class='content'></div>");
-            content.append($("<div class='header browserTitle'>" + value['Title'] + "</div>"));
-            content.append($("<p class = 'browseAuthor'>" + value['Name'] + "</p>"));
+            content.append($("<a class='header browserTitle' href = 'single-painting.php?PaintingID=" + value['PaintingID'] + "' >" + value['Title'] + "</a>"));
+            content.append($("<br>"));
+            content.append($("<a class = 'browseAuthor' href = 'single-artist.php?ArtistID=" + value['ArtistID'] + "' >" + value['Name'] + "</a>"));
             content.append($("<p>$" + parseInt(value['MSRP']).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,') + "</p>"));
             if (value['Excerpt'] != null)
                 content.append($("<div class = 'item'><p>" + value['Excerpt'] + "</p></div>"));

@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by edbertvoo
- * modified by dave
- * Date: 2016-11-16
- * 
- */
+
 
 include_once 'components/includes.php';
 include_once 'components/BrowsePainting.php';
@@ -12,8 +7,7 @@ $painting = BusinessHelper::createObject(new BrowsePainting(BusinessHelper::getC
 ?>
 
 <!DOCTYPE html>
-<html lang=en>
-
+<html lang=en xmlns="http://www.w3.org/1999/html">
 <?php
 echo generateHead("Browse Paintings");
    
@@ -26,6 +20,8 @@ echo generateHead("Browse Paintings");
     //echo $painting->generateBanner();
 
 ?>
+<main>
+<h2 class="ui horizontal divider"></h2>
 <div class="ui fluid container">
     <div class="banner1">
         <div class="ui left aligned container">
@@ -132,6 +128,11 @@ echo generateHead("Browse Paintings");
 
 
 <script src="js/browse-painting.js"></script>
+
+</main>
+<?php
+echo generateFooter();
+?>
 </body>
 
 </html>

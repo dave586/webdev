@@ -19,7 +19,7 @@
     },
         //getting the json from web service
          apiSettings: {
-       url: "https://assign3-evoo540-edbertv.c9users.io/service-painting.php?search={query}",
+       url: "service-painting.php?search={query}"
     },
     //the fields used in selecting the right search string 
     fields: {

@@ -2,12 +2,7 @@
 include_once 'AbstractBusiness.php';
 include_once 'SubjectDB.php';
 
-/**
- * Created by PhpStorm.
- * User: edbertvoo
- * Date: 2016-11-04
- * Time: 2:39 PM
- */
+
 class BrowseSubjects extends AbstractBusiness
 {
     /**
@@ -38,7 +33,7 @@ class BrowseSubjects extends AbstractBusiness
    
     </a>
     <div class="content">
-      <div class="header">' . $subject["SubjectName"] . '</div>
+      <a class="header" href="single-subject.php?SubjectID=' . $subject["SubjectID"] . '">' . $subject["SubjectName"] . '</a>
     </div>
     </div>';
         }

@@ -37,7 +37,7 @@ class BrowseGenre extends AbstractBusiness
       <img src="images/art/genres/square-medium/' . $genre["GenreID"] . '.jpg">
      </a>
     <div class="content">
-      <div class="header">' . $genre["GenreName"] . '</div>
+      <a class="header" href="single-genre.php?GenreID='.$genre["GenreID"].'">' . $genre["GenreName"] . '</a>
     </div>
     </div>';
         }

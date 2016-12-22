@@ -2,12 +2,7 @@
 
 include_once 'AbstractDB.php';
 
-/**
- * Created by PhpStorm.
- * User: edbertvoo
- * Date: 2016-11-12
- * Time: 3:48 PM
- */
+
 class OrderDetailsDB extends AbstractDB
 {
 

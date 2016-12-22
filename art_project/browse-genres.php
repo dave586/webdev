@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: edbertvoo
- * Date: 2016-10-24
- * Time: 1:23 AM
- */
+
 
 include_once 'components/includes.php';
 include_once 'components/BrowseGenre.php';
@@ -22,7 +17,8 @@ echo generateHead("Browse Genre");
 <body>
 <?php
 echo generateHeader();
-?> 
+?>
+<main>
     <h2 class="ui horizontal divider"></h2>   
 
 <?php
@@ -34,6 +30,10 @@ echo $genre->generateGenreList();
     BusinessHelper::closeAllConnection();
     ?></div>
 
+</main>
+<?php
+echo generateFooter();
+?>
 </body>
 
 </html>

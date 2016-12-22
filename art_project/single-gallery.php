@@ -22,13 +22,21 @@ echo generateHead($gallery->getName());
 <?php
 
 echo generateHeader();
-?><h2 class="ui horizontal divider"></h2>
+?>
+<main>
+<h2 class="ui horizontal divider"></h2>
 <?php
 echo $gallery->generateBanner();
 ?>
 <div class="ui segment">
     <?php
     echo $gallery->generateGalleryHead();
+
+
+    echo "<h2 class=\"ui horizontal divider\">contains following artwork</h2>  ";
+
+
+
 
     echo $gallery->generatePaintingList();
 
@@ -60,7 +68,10 @@ echo $gallery->generateBanner();
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgZwWy83_GYQUkVM57bKjPAu9Vao508xw&callback=initMap">
 </script>
 
-
+</main>
+<?php
+echo generateFooter();
+?>
 </body>
 
 

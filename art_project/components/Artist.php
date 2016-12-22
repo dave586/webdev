@@ -73,15 +73,16 @@ class Artist extends AbstractBusiness
             <h3 class="header">' . $this->nameHelper($row["FirstName"], $row["LastName"]) . '</h3>
             <p>Gender: ' . $row["Gender"] . '</p><p>Nationality: ' . $row["Nationality"] . '</p><p>Born on: ' . $row["YearOfBirth"] . '</p><p>Died on: ' . $row["YearOfDeath"] . '</p>
             <p>' . $this->utf8_Validate($row["Details"]) . '</p>
-            <a href="' . $row["ArtistLink"] . '">' . $row["ArtistLink"] . '</a>
+   
+            <a href="' . $row["ArtistLink"] . '">more information could be found here </a>
             <br><p>';
                     if($this->favourites->getExistFav($this->ArtistID)){ 
                         $output.= '<a href="remove-favourite.php?PaintingID='.$this->ArtistID.'&return='.urlencode($_SERVER["REQUEST_URI"]).'">
-                        <button class="ui right labeled icon button"><i class="ban icon"></i> Remove from Favourites';
+                        <br><button class="ui right labeled icon button"><i class="ban icon"></i> Remove from Favourites';
                     }
                         else 
                             $output.='<a href="add-favourite.php?ArtistID='.$this->ArtistID.'&return='.urlencode($_SERVER["REQUEST_URI"]).'">
-                            <button class="ui right labeled icon button"><i class="heart icon"></i> Add to Favorites';                                
+                            <br><button class="ui right labeled icon button"><i class="heart icon"></i> Add to Favorites';
             $output.='</button></a><p>
         </div>
     </div>
@@ -107,7 +108,7 @@ class Artist extends AbstractBusiness
       <img src="images/art/works/square-medium/' . $painting["ImageFileName"] . '.jpg">
     </a>
     <div class="content">
-      <div class="header">' .$this->utf8_Validate( $painting["Title"]) . '</div>
+      <a class="header" href="single-painting.php?PaintingID='.$painting["PaintingID"].'">' .$this->utf8_Validate( $painting["Title"]) . '</a>
     </div>
    </div>';
         }

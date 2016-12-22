@@ -3,12 +3,7 @@
 include_once "AbstractDB.php";
 include_once 'DBHelper.php';
 
-/**
- * Created by PhpStorm.
- * User: edbertvoo
- * Date: 2016-11-04
- * Time: 7:20 PM
- */
+
 class PaintingDB extends AbstractDB
 {
     /**

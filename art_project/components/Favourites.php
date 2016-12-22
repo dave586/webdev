@@ -75,14 +75,14 @@ class Favourites extends AbstractBusiness {
                     <a href="single-painting.php?PaintingID=' . $item["PaintingID"] . '"><img src="images/art/works/square-medium/' . $item["ImageFileName"] . '.jpg" alt="..." class="image"></a>
                 </div>
                 <div class="content">
-                 <div class="header browserTitle">' . $this->utf8_Validate($item["Title"]) . '</div>';
-                    $output .= '<br>
-                    
+                 <a class="header browserTitle" href="single-painting.php?PaintingID=' . $item["PaintingID"] . '">' . $this->utf8_Validate($item["Title"]) . '</a>';
+                $output .= '<br>
+                        <div class="extra">
                         <a href="remove-favourite.php?PaintingID=' . $item["PaintingID"] . '&return=' . urlencode($_SERVER['REQUEST_URI']) . '" class="ui icon orange button">
                             <i class="trash icon"></i>
-                            Remove Item
+                            Remove This Item
                         </a>
-                    
+                    </div>
                     </div>
                     </div>                               
                  <hr><br>';
@@ -115,15 +115,16 @@ class Favourites extends AbstractBusiness {
                                         <a href="single-artist.php?ArtistID=' . $artist["ArtistID"] . '"><img src="images/art/artists/square-medium/' . $artist["ArtistID"] . '.jpg" alt="..." class="image"></a>
                                         </div>
                                         <div class="content">
-                                        <div class="header browserTitle">' . $this->nameHelper($artist["FirstName"], $artist["LastName"]) . '</div>';
+                                        <a class="header browserTitle" href="single-artist.php?ArtistID=' . $artist["ArtistID"] . '">' . $this->nameHelper($artist["FirstName"], $artist["LastName"]) . '</a>';
                     $output .= '
-                        <div>
+                        <div class="extra">
                         <a href="remove-favourite.php?ArtistID=' . $artist["ArtistID"] . '&return=' . urlencode($_SERVER['REQUEST_URI']) . '" class="ui icon orange button">
                             <i class="trash icon"></i>
-                            Remove Item
+                            Remove This Item
                         </a>
                         </div>
-                        </div>                               
+                        </div>
+                        </div>
                     <hr><br>';
                 }
             }

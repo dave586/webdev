@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: edbertvoo
- * Date: 2016-11-04
- * Time: 6:22 PM
- */
+
 
 include_once 'components/includes.php';
 include_once 'components/BrowseSubjects.php';
@@ -22,7 +17,8 @@ echo generateHead("Browse Subjects");
 <?php
 echo generateHeader();
     
-  ?>  
+  ?>
+<main>
     <h2 class="ui horizontal divider"></h2> 
    
     <?php
@@ -37,7 +33,10 @@ echo $subjects->generateSubjectList();
 BusinessHelper::closeAllConnection();
 ?>
 </div>
-
+</main>
+<?php
+echo generateFooter();
+?>
 </body>
 
 </html>

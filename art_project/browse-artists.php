@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: edbertvoo
- * Date: 2016-10-24
- * Time: 1:23 AM
- */
+
 
 include_once 'components/includes.php';
 include_once 'components/BrowseArtists.php';// use an artist genre
@@ -28,7 +23,7 @@ echo generateHead("Browse Artists");
 echo generateHeader();
     
   ?>  
-    
+    <main>
   <h2 class="ui horizontal divider"></h2>  
     
  <?php   
@@ -46,7 +41,10 @@ BusinessHelper::closeAllConnection();
 
 ?>
         </div>
-
+</main>
+<?php
+echo generateFooter();
+?>
 </body>
 
 </html>

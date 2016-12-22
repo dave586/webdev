@@ -1,12 +1,7 @@
 <?php
 
 include_once 'AbstractDB.php';
-/**
- * Created by PhpStorm.
- * User: edbertvoo
- * Date: 2016-11-12
- * Time: 5:24 PM
- */
+
 class PaintingGenresDB extends AbstractDB
 {
 

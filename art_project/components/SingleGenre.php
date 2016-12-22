@@ -54,6 +54,7 @@ class SingleGenre extends AbstractBusiness
         <div class="twelve wide column">
             <h3 class="header">' . $name["GenreName"] . '</h3>
             <p>' . utf8_encode($desc["Description"]) . '</p>
+             <a href="' . $name["Link"] . '">more information could be found here </a>
         </div>
     </div>
 </div>';
@@ -78,7 +79,7 @@ class SingleGenre extends AbstractBusiness
       <img src="images/art/works/square-medium/' . $painting["ImageFileName"] . '.jpg">
     </a>
     <div class="content">
-      <div class="header">' . $this->utf8_Validate($painting["Title"]) . '</div>
+      <a class="header" href="single-painting.php?PaintingID=' . $painting["PaintingID"] . '">' . $this->utf8_Validate($painting["Title"]) . '</a>
     </div>
    </div>';
 

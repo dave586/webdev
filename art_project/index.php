@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: edbertvoo
- * Date: 2016-10-16
- * Time: 9:46 PM
- */
+
 
 include_once 'components/includes.php';
 ?>
@@ -86,6 +81,9 @@ echo generateHeader()
 
 
                 </main>
+            <?php
+            echo generateFooter();
+            ?>
         </body>
 
     </html>

@@ -1,11 +1,5 @@
 <?php
-/**
- * 
- * User: edbertvoo
- * Date: 2016-12-11
- * this is the service db that makes the web service
- * 
- */
+
 //include_once 'AbstractBusiness.php';
 include_once "AbstractDB.php";
 include_once 'BusinessHelper.php';

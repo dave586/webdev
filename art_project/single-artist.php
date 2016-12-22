@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: edbertvoo
- * Date: 2016-10-24
- * Time: 2:46 AM
- */
+
 
 include_once 'components/includes.php';
 include_once 'components/Artist.php';
@@ -25,16 +20,21 @@ echo generateHead($artist->getName());
 ?>
 
 <body>
+
 <?php
 
-echo generateHeader();
+echo generateHeader();?>
+
+<main>
+    <?php
+echo "<h2 class=\"ui horizontal divider\"></h2>  ";
 echo $artist->generateBanner();
 echo $artist->generateInfo();
     ?>
-    
-    
-    <div class="ui segment">
-    
+
+    <h3 class="ui horizontal divider">artworks</h3>
+<div class="ui segment">
+
     <?php
 echo $artist->generatePaintingList();
 
@@ -43,7 +43,10 @@ BusinessHelper::closeAllConnection();
 ?>
 
     </div>
-
+</main>
+<?php
+echo generateFooter();
+?>
 
         </body>
 

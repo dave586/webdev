@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: edbertvoo
- * Date: 2016-11-12
- * Time: 12:55 PM
- */
+
 
 /**
  * Generate the item count HTML from session name

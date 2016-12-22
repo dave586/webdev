@@ -6,7 +6,7 @@ include_once 'PaintingDB.php';
 
 /**
 *
-*
+*builds and displays single gallery
 */
 class SingleGallery extends AbstractBusiness
 {

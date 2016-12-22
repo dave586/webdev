@@ -2,12 +2,7 @@
 
 //This is an entity object that represents a painting
 
-/**
- * Created by PhpStorm.
- * User: edbertvoo
- * Date: 2016-11-12
- * Time: 3:37 PM
- */
+
 class Painting
 {
     private $PaintingID, $FrameID, $GlassID, $MattID, $quantity;

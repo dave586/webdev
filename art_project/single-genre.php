@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: edbertvoo
- * Date: 2016-10-16
- * Time: 11:56 PM
- */
+
 
 include_once 'components/includes.php';
 include_once 'components/SingleGenre.php';
@@ -35,15 +30,16 @@ echo generateHead($genre->getGenreName());
 
 echo generateHeader();
     ?>
-    
+    <main>
    <h2 class="ui horizontal divider"></h2>  
     <?php
 echo $genre->generateBanner();
     ?>
-     <div class="ui segment">
+        <div class="ui segment">
 <?php
     
 echo $genre->generateGenreHead();
+echo "<h2 class=\"ui horizontal divider\">artworks</h2>";
 echo $genre->generatePaintingList();
     
 BusinessHelper::closeAllConnection();
@@ -51,7 +47,10 @@ BusinessHelper::closeAllConnection();
 ?>
 
     </div>
-
+</main>
+<?php
+echo generateFooter();
+?>
 
 </body>
 

@@ -3,12 +3,7 @@
 
 include_once 'NavHelper.php';
 
-/**
- * Created by PhpStorm.
- * modified by dave
- * Date: 2016-11-17
- * 
- */
+
 
 /**
  * Generate the header for help pages(NAV, TITLE, ETC)
@@ -25,10 +20,10 @@ function generateHeader()
                     Account
                     <i class="dropdown icon"></i>
                     <div class="menu">
-                        <a class="item" href="http://www.edbertvoo.com"><i class="sign in icon"></i> Login</a>
-                        <a class="item" href="http://www.edbertvoo.com"><i class="edit icon"></i> Edit Profile</a>
-                        <a class="item" href="http://www.edbertvoo.com"><i class="globe icon"></i> Choose Language</a>
-                        <a class="item" href="http://www.edbertvoo.com"><i class="settings icon"></i> Account Settings</a>
+                        <a class="item" href="aboutus.php"><i class="sign in icon"></i> Login</a>
+                        <a class="item" href="aboutus.php"><i class="edit icon"></i> Edit Profile</a>
+                        <a class="item" href="aboutus.php"><i class="globe icon"></i> Choose Language</a>
+                        <a class="item" href="aboutus.php"><i class="settings icon"></i> Account Settings</a>
                     </div>
                 </div>
                 <a class=" item" href="view-favourites.php">
@@ -53,7 +48,7 @@ function generateHeader()
             <a class="item" href="aboutus.php">
                 <i class="mail icon"></i> About Us
             </a>
-            <a class="item" href="http://www.edbertvoo.com">
+            <a class="item" href="aboutus.php">
                 <i class="home icon"></i> Blog
             </a>
             <div class="ui simple dropdown item">

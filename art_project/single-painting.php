@@ -1,16 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: edbertvoo
- * Date: 2016-10-18
- * Time: 5:30 PM
- */
+
 
 
 include_once 'components/includes.php';
 include_once 'components/SinglePainting.php';
 include_once 'components/Cart.php';
 include_once 'components/Favourites.php';
+
+include_once 'components/Artist.php';
+include_once 'components/ArtistDB.php';
 
 //echo print_r(get_declared_classes());
 ?>
@@ -20,6 +18,7 @@ include_once 'components/Favourites.php';
 
 
 <?php
+$artist = BusinessHelper::createObject(new Artist(BusinessHelper::getConnection()));
 $painting = BusinessHelper::createObject(new SinglePainting(BusinessHelper::getConnection()));
 $cart = BusinessHelper::createObject(new Cart(BusinessHelper::getConnection()));
 $favourites = BusinessHelper::createObject(new Favourites(BusinessHelper::getConnection()));
@@ -191,7 +190,7 @@ echo generateHeader();
                         <input type="hidden" name="return" value="<?php echo rawUrlEncode($_SERVER['REQUEST_URI']); ?>"/>
                         <input type="hidden" name="sp" value="true">
                         <div class="four fields">
-                            <div class="three wide field">
+                            <div class="four wide field">
                                 <label>Quantity</label>
 
                                 <?php
@@ -326,16 +325,21 @@ echo generateHeader();
     <!-- END Description, On the Web, Reviews Tabs -->
 
     <!-- Related Images ... will implement this in assignment 2 -->
+    <h2 class="ui dividing header"></h2>
     <section class="ui container">
         <h3 class="ui dividing header">Related Works</h3>
+
+       <?php $artist->setArtistID($painting->getArtistID()); echo $artist->generatePaintingList(); ?>
+
+
     </section>
 
 </main>
 
 
-<footer class="ui black inverted segment">
-    <div class="ui container">footer</div>
-</footer>
+<?php
+echo generateFooter();
+?>
 
 </body>
 

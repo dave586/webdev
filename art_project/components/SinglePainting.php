@@ -16,7 +16,7 @@ include_once 'PaintingDB.php';
 include_once 'ArtistDB.php';
 
 /**
- *modified 11-19-2016
+ *
  *this page is used in making the single painting page
  *contains logic operations in most methods
  */

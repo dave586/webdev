@@ -1,11 +1,6 @@
 <?php
 
-/*
- * This class is the abstract layer for data access. All DB classes extend AbstractDB and have its functions implemented
- *
- *
- *
- */
+
 
 abstract class AbstractDB {
 

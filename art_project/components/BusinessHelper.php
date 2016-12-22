@@ -1,12 +1,7 @@
 <?php
 include_once 'DBHelper.php';
 
-/**
- * Created by PhpStorm.
- * User: edbertvoo
- * Date: 2016-11-01
- * Time: 10:28 AM
- */
+
 class BusinessHelper
 {
     private static $pdo = null;
@@ -21,7 +16,7 @@ class BusinessHelper
 
         if (self::$pdo == null) {
 
-            define("USER", "edbertv");
+            define("USER", "user");
             define("PASS", "");
             define("CONNSTRING", "mysql:host=".getenv('IP').":3306;dbname=art");
 

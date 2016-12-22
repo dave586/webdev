@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: edbertvoo
- * Date: 2016-11-11
- * Time: 9:26 PM
- */
+
 
 include_once 'components/includes.php';
 include_once "components/Cart.php";
@@ -23,7 +18,9 @@ echo generateHead("View Cart");
 echo generateHeader();
 
 $cart = BusinessHelper::createObject(new Cart(BusinessHelper::getConnection())); ?>
-
+<br>
+<main>
+    <div class="ui fluid container">
 <form class="ui form" method="POST" action="continue-shopping.php">
     <div class="ui stackable grid container">
         <div class="left floated three wide column">
@@ -50,10 +47,11 @@ $cart = BusinessHelper::createObject(new Cart(BusinessHelper::getConnection()));
              <div id="cartOptions">
                 
                     <?php if (!$cart->isEmpty()) { ?>
+
                     <div id="subTotal">
                             <p class="alighRight">Sub Total: $<span id="subTotalValue"></span></p>
                     </div>
-    
+                        <br>
                     <select name="shipping" id="shippingType">
                         <option <?php if (!$cart->isShippingExpress()) {
                             echo 'selected';
@@ -66,14 +64,15 @@ $cart = BusinessHelper::createObject(new Cart(BusinessHelper::getConnection()));
                     </select>
     
                     <!-- calculate the shipping -->
+                        <br>
                     <div id="shippingTotal">
                         <p class="alighRight">Shipping: $<span id="shippingValue"></span></p>
                     </div>
-                    
+
                     <div id="cartTotal">
                         <p class="alighRight">Total: $<span id="totalValue"></span></p>
                     </div>
-    
+                    <br>
                     <a href="#" class="ui button orange"><i class="dollar icon"></i> Checkout</a>
                     <button class="ui orange button"><i class="mail forward icon" type="submit"></i> Continue Shopping</button>
     
@@ -90,13 +89,17 @@ $cart = BusinessHelper::createObject(new Cart(BusinessHelper::getConnection()));
         </div>
     </div>
 </form>
-
+    </div>
 
 
 
 
 <script type="text/javascript" src="js/view-cart.js"></script>
 <?php BusinessHelper::closeAllConnection(); ?>
+</main>
+<?php
+echo generateFooter();
+?>
 </body>
 
 </html>

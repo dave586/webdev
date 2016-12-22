@@ -9,12 +9,7 @@ include_once 'TypesFramesDB.php';
 include_once 'TypesMattDB.php';
 include_once 'TypesGlassDB.php';
 
-/**
- * Created by PhpStorm.
- * User: edbertvoo
- * Date: 2016-11-11
- * Time: 9:24 PM
- */
+
 class Cart extends AbstractBusiness
 {
     private $PaintingID;//This will be an array that will store the list of added paintings to the cart
@@ -192,8 +187,9 @@ class Cart extends AbstractBusiness
                     <a href="single-painting.php?PaintingID=' . $item["PaintingID"] . '"><img src="images/art/works/square-medium/' . $item["ImageFileName"] . '.jpg" alt="..." class="image"></a>
                 </div>
                 <div class="content">
-                 <div class="header browserTitle">' . $this->utf8_Validate($item["Title"]) . '</div>
-                    <p class="browseAuthor">' . $this->nameHelper($artist["FirstName"], $artist["LastName"]) . '</p>
+                 <a class="header browserTitle" href="single-painting.php?PaintingID=' . $item["PaintingID"] . '">' . $this->utf8_Validate($item["Title"]) . '</a>
+                 <div>
+                    <a class="browseAuthor" href="single-artist.php?ArtistID=' . $item["ArtistID"] . '">' . $this->nameHelper($artist["FirstName"], $artist["LastName"]) . '</a></div>
                     <div id="msrp'.str_replace(" ", "|", $key).'" class="priceData">'.$item["MSRP"].'</div>
                     <p>Base MSRP: $' . number_format($item["MSRP"], 2) . '</p>';
 
@@ -201,14 +197,11 @@ class Cart extends AbstractBusiness
 
 
                 $output .= '
-
-                    
-                    
                     <!-- This is used to generate the material part of the painting -->
-                    <div class="ui segments">
-                    <div class="segment">
+                    
+                    <div class="ui segment">
                      <div class="four fields">
-                                            <div class="two wide field">
+                                            <div class="three wide field">
                                                 <label>Quantity</label>
                                                 <input name="Quantity' . str_replace(" ", "|", $key) . '" id = "quantity' . str_replace(" ", "|", $key) . '" type="number" value="' . $paintingEntity->getQuantity() . '">
                                             </div>
@@ -231,7 +224,6 @@ class Cart extends AbstractBusiness
                                 </select>
                                 </div>
                                 </div>
-</div>                    
 </div>';
 
 

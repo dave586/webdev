@@ -2,12 +2,7 @@
 include_once 'ArtistDB.php';
 include_once 'AbstractBusiness.php';
 
-/**
- * Created by PhpStorm.
- * User: edbertvoo
- * Date: 2016-10-24
- * Time: 1:41 AM
- */
+
 class BrowseArtist extends AbstractBusiness
 {
 
@@ -53,11 +48,13 @@ class BrowseArtist extends AbstractBusiness
         foreach ($row as $artist) {
             $output .= '
 <div class="ui card">
-  <a class="image" href="single-artist.php?ArtistID=' . $artist["ArtistID"] . '">
+    <a class="image" href="single-artist.php?ArtistID=' . $artist["ArtistID"] . '">
       <img src="images/art/artists/square-medium/' . $artist["ArtistID"] . '.jpg">
        </a>
     <div class="content">
-      <div class="header">' . $this->utf8_Validate($artist["FirstName"]) . ' ' . $this->utf8_Validate($artist["LastName"]) . '</div>
+    
+      <a class="header" href="single-artist.php?ArtistID=' . $artist["ArtistID"] . '">' . $this->utf8_Validate($artist["FirstName"]) . ' ' . $this->utf8_Validate($artist["LastName"]) . '</a>
+    
     </div>
 </div>';
         }
