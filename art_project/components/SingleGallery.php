@@ -87,7 +87,7 @@ class SingleGallery extends AbstractBusiness
       <img src="images/art/works/square-medium/' . $painting["ImageFileName"] . '.jpg">
     </a>
     <div class="content">
-      <div class="header">' . $this->utf8_Validate($painting["Title"]) . '</div>
+      <a class="header" href="single-painting.php?PaintingID=' . $painting["PaintingID"] . '">' . $this->utf8_Validate($painting["Title"]) . '</a>
     </div>
    </div>';
         }
