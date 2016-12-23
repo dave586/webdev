@@ -15,7 +15,8 @@ echo generateHead("Home");
             <?php
 echo generateHeader()
 ?>
-
+            <main>
+                <br>
                 <div class="hero-container">
                     <div class="ui text container">
                         <h1 class="ui huge header">Decorate your world</h1>
@@ -24,7 +25,7 @@ echo generateHeader()
                 </div>
                 <h2 class="ui horizontal divider"><i class="tag icon"></i> Deals</h2>
 
-                <main>
+
 
                     <!-- Randy used stackable grid container. You'll have to figure this out later -->
                     <div class="ui cards centered">
